@@ -1,0 +1,18 @@
+print("Program oblicza pierwiastki rzeczywiste trojmianu kwadratowego.")
+a = float(input("Podaj liczbe rzeczywista a:"))
+while a == 0:
+    a = float(input("a nie moze byc rowne 0! Podaj a:"))
+
+b = float(input("Podaj liczbe rzeczywista b:"))
+c = float(input("Podaj liczbe rzeczywista c:"))
+delta = b**2-4*a*c
+
+if delta>0:
+    x1 = (-b+(delta)**0.5)/2*a
+    x2 = (-b-(delta)**0.5)/2*a
+    print("Równanie ma dwa pierwiastki rzeczywiste: x1:", x1, "x2:", x2)
+elif delta == 0:
+    x0 = -b/2*a
+    print("Równanie ma jeden pierwiastek rzeczywisty i jest nim:", x0)
+else:
+    print("Brak pierwiastków rzeczywistych")
